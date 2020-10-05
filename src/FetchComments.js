@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
+import Jumbotron from "react-bootstrap/Jumbotron";
 function FetchComments() {
   const [comments, setComments] = useState([]);
 
@@ -16,15 +16,17 @@ function FetchComments() {
       });
   }, []);
   return (
-    <div>
+    <div className="container">
       <ul>
-        {comments.map(comment => (
-          <li key={comment.id}>
-            <div>{comment.name}</div>
-            <div>{comment.email}</div>
-            <div>{comment.body}</div>
-          </li>
-        ))}
+        <Jumbotron>
+          {comments.map(comment => (
+            <li key={comment.id}>
+              <div> User: {comment.name}</div>
+              <div>Email: {comment.email}</div>
+              <div>{comment.body}</div>
+            </li>
+          ))}
+        </Jumbotron>
       </ul>
     </div>
   );
