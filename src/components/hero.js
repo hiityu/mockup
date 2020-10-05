@@ -8,7 +8,12 @@ const Styles = styled.div`
   padding-top: 5%;
   padding-bottom: 18%;
   z-index: 1;
-  margin-bottom: -183px;
+  @media (min-width: 1385px) {
+    margin-bottom: -183px;
+  }
+  @media (max-width: 1384px) {
+    margin-bottom: -90px;
+  }
   p {
     margin-bottom: 0px;
   }

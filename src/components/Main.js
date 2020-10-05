@@ -24,11 +24,21 @@ const Styles = styled.div`
     width: 100%;
     align-items: stretch !important;
   }
+  #box2 {
+    text-align: center;
+    background: #fff;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 60px 28px 56px;
+    padding-botton: 20px;
+    width: 100%;
+    align-items: stretch !important;
+  }
+
   h4 {
     padding-top: 50px;
   }
   .up {
-    padding: 0 0 30px 0;
+    padding: 0 0 40px 0;
     postion: relative;
     z-index: 3;
   }
@@ -44,7 +54,7 @@ function Main() {
               <Col xs={12} md={4}>
                 <div id="box">
                   <img src={blue} alt="" />
-                  <h4>Blue</h4>
+                  <h4 id="padding1">Blue</h4>
                   <p>
                     Blue is the color of the sky and the sea. it is often
                     associated with depth and stability. it symbolizes trust
@@ -55,7 +65,7 @@ function Main() {
               </Col>
 
               <Col xs={12} md={4}>
-                <div id="box">
+                <div id="box2">
                   <img className="padit" src={green} alt="" />
                   <h4>Green</h4>
                   <p>
@@ -66,7 +76,7 @@ function Main() {
                 </div>
               </Col>
               <Col xs={12} md={4}>
-                <div id="box">
+                <div id="box2">
                   <img src={red} alt="" />
                   <h4>Red</h4>
                   <p>
