@@ -1,8 +1,21 @@
 import React from "react";
 import { useGoogleLogin } from "react-google-login";
+import google from "../assests/google.png";
+import styled from "styled-components";
 
 // refresh token
 import { refresh } from "./refesh";
+
+const Styles = styled.div`
+  .but {
+    color: black;
+    background: white;
+    border: none;
+  }
+  .button-text {
+    padding-left: 2px;
+  }
+`;
 
 const clientId =
   "700739214835-5bkglg53lsc3bhmvu3tr5mod8mbjbsr5.apps.googleusercontent.com";
@@ -30,11 +43,13 @@ function Login() {
   });
 
   return (
-    <button onClick={signIn} className="button">
-      <img src="icons/google.svg" alt="google login" className="icon"></img>
+    <Styles>
+      <button onClick={signIn} className="but">
+        <img src={google} width="30" alt="google login" className="icon"></img>
 
-      <span className="buttonText">Sign in with Google</span>
-    </button>
+        <span className="buttonText"> Sign in with Google</span>
+      </button>
+    </Styles>
   );
 }
 

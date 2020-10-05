@@ -2,14 +2,17 @@ import React from "react";
 import styled from "styled-components";
 
 const Styles = styled.div`
-  background: grey;
+  background: rgb(146 146 146);
   color: white;
   text-align: center;
-  padding-top: 10%;
+  padding-top: 8%;
   padding-bottom: 15%;
   z-index: 1;
-  .p {
+  p {
     margin-bottom: 0px;
+  }
+  h1 {
+    font-size: 6rem;
   }
 `;
 
