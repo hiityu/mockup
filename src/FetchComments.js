@@ -7,6 +7,11 @@ import styled from "styled-components";
 
 const Styles = styled.div`
   padding: 5px;
+  @media (max-width: 600px) {
+    .ul {
+      padding-left: 0px;
+    }
+  }
 `;
 
 function FetchComments() {
