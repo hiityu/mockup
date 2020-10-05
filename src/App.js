@@ -8,9 +8,6 @@ import Container from "react-bootstrap/Container";
 import Hero from "./components/Hero";
 import Main from "./components/Main";
 import FetchComments from "./FetchComments";
-// Google
-import Login from "./components/Login";
-import Logout from "./components/Logout";
 
 class App extends Component {
   render() {

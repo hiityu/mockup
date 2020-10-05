@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Login from "./Login";
 
 const Styles = styled.div`
   background: rgb(146 146 146);
