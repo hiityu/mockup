@@ -5,7 +5,8 @@ import "./App.css";
 import { Navigationbar } from "./components/Navigationbar";
 import Container from "react-bootstrap/Container";
 // Main Content
-import Body from "./components/Login";
+import Hero from "./components/Hero";
+import Main from "./components/Main";
 import FetchComments from "./FetchComments";
 // Google
 import Login from "./components/Login";
@@ -16,9 +17,9 @@ class App extends Component {
     return (
       <React.Fragment>
         <Navigationbar />
-        <Container>
-          <FetchComments />
-        </Container>
+        <Hero />
+        <Main />
+        <FetchComments />
       </React.Fragment>
     );
   }

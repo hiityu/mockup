@@ -16,19 +16,17 @@ function FetchComments() {
       });
   }, []);
   return (
-    <div className="container">
-      <ul>
-        <Jumbotron>
-          {comments.map(comment => (
-            <li key={comment.id}>
-              <div> User: {comment.name}</div>
-              <div>Email: {comment.email}</div>
-              <div>{comment.body}</div>
-            </li>
-          ))}
-        </Jumbotron>
-      </ul>
-    </div>
+    <ul>
+      <Jumbotron>
+        {comments.map(comment => (
+          <li key={comment.id}>
+            <div> User: {comment.name}</div>
+            <div>Email: {comment.email}</div>
+            <div>{comment.body}</div>
+          </li>
+        ))}
+      </Jumbotron>
+    </ul>
   );
 }
 export default FetchComments;
