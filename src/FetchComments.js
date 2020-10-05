@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Jumbotron from "react-bootstrap/Jumbotron";
+import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import styled from "styled-components";
+
+const Styles = styled.div`
+  padding: 5px;
+`;
 
 function FetchComments() {
   const [comments, setComments] = useState([]);
@@ -21,19 +26,23 @@ function FetchComments() {
   return (
     <ul>
       {comments.map(comment => (
-        <Jumbotron key={comment.id}>
-          <Row>
-            <Col md={3}>
-              <h4> User: </h4>
-              <h4>{comment.name}</h4>
-              <h4>Email: </h4>
-              <h4>{comment.email}</h4>
-            </Col>
-            <Col md={9}>
-              <p>{comment.body}</p>
-            </Col>
-          </Row>
-        </Jumbotron>
+        <Styles>
+          <Card key={comment.id}>
+            <Card.Header>
+              <h4>
+                <strong>{comment.name}</strong>
+              </h4>
+              <strong>{comment.email} </strong>
+            </Card.Header>
+            <Card.Body>
+              <Card.Text>
+                <Row>
+                  <Col>{comment.body}</Col>
+                </Row>
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </Styles>
       ))}
     </ul>
   );

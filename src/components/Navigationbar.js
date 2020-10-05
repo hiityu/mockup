@@ -8,14 +8,18 @@ import Logout from "./Logout";
 import styled from "styled-components";
 import brand from "../assests/bytelion-logo.png";
 
-const Styles = styled.div``;
+const Styles = styled.div`
+  .navbar {
+    padding: 0px;
+  }
+`;
 
 export const Navigationbar = () => (
   <Styles>
     <Container>
       <Navbar expand="lg">
         <Navbar.Brand href="/">
-          <img src={brand} width="220" />
+          <img src={brand} width="200" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

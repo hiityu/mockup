@@ -11,8 +11,9 @@ const Styles = styled.div`
     color: black;
     background: white;
     border: none;
+    box-shadow: -1px 2px 4px #888888;
   }
-  .button-text {
+  .buttontext {
     padding-left: 2px;
   }
 `;
@@ -45,7 +46,7 @@ function Login() {
   return (
     <Styles>
       <button onClick={signIn} className="but">
-        <img src={google} width="30" alt="google login" className="icon"></img>
+        <img src={google} width="25" alt="google login" className="icon"></img>
 
         <span className="buttonText"> Sign in with Google</span>
       </button>

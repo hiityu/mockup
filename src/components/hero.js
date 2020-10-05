@@ -5,9 +5,10 @@ const Styles = styled.div`
   background: rgb(146 146 146);
   color: white;
   text-align: center;
-  padding-top: 8%;
-  padding-bottom: 15%;
+  padding-top: 5%;
+  padding-bottom: 18%;
   z-index: 1;
+  margin-bottom: -183px;
   p {
     margin-bottom: 0px;
   }
